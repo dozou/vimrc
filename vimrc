@@ -30,6 +30,8 @@ set visualbell
 set showmatch
 " ステータスラインを常に表示
 set laststatus=2
+" シンタックスハイライトを追加
+syntax on
 " コマンドラインの補完
 set wildmode=list:longest
 " 折り返し時に表示行単位での移動できるようにする
@@ -43,9 +45,9 @@ set list listchars=tab:\▸\-
 " Tab文字を半角スペースにする
 set expandtab
 " 行頭以外のTab文字の表示幅（スペースいくつ分）
-set tabstop=2
+set tabstop=4
 " 行頭でのTab文字の表示幅
-set shiftwidth=2
+set shiftwidth=4
 
 
 " 検索系

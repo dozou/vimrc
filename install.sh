@@ -2,7 +2,7 @@
 
 set -e
 
-echo "-- vim setting start! --"
-
 cp ./vimrc ~/.vimrc
 cp ./gvimrc ~/.gvimrc
+
+exit 0

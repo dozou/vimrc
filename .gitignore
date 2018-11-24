@@ -71,4 +71,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+dein/
+dein.sh
 

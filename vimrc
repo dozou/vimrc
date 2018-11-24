@@ -1,3 +1,26 @@
+if &compatible
+  set nocompatible
+endif
+" Add the dein installation directory into runtimepath
+set runtimepath+=!PATH!/repos/github.com/Shougo/dein.vim
+
+if dein#load_state('!PATH!')
+  call dein#begin('!PATH!')
+
+  call dein#add('!PATH!/repos/github.com/Shougo/dein.vim')
+  call dein#add('Shougo/deoplete.nvim')
+  if !has('nvim')
+    call dein#add('roxma/nvim-yarp')
+    call dein#add('roxma/vim-hug-neovim-rpc')
+  endif
+
+  call dein#end()
+  call dein#save_state()
+endif
+
+filetype plugin indent on
+syntax enable
+
 " setting
 "文字コードをUFT-8に設定
 set fenc=utf-8
@@ -30,8 +53,6 @@ set visualbell
 set showmatch
 " ステータスラインを常に表示
 set laststatus=2
-" シンタックスハイライトを追加
-syntax on
 " コマンドラインの補完
 set wildmode=list:longest
 " 折り返し時に表示行単位での移動できるようにする

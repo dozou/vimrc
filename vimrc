@@ -14,12 +14,22 @@ if dein#load_state('!PATH!')
     call dein#add('roxma/vim-hug-neovim-rpc')
   endif
 
+  call dein#add('tomasr/molokai')
+  call dein#add('scrooloose/nerdtree')
+  call dein#add('Shougo/neosnippet.vim')
+  call dein#add('Shougo/neosnippet-snippets')
+
   call dein#end()
   call dein#save_state()
 endif
 
 filetype plugin indent on
 syntax enable
+
+if dein#check_install()
+  call dein#install()
+endif
+
 
 " setting
 "文字コードをUFT-8に設定

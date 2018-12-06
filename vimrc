@@ -15,6 +15,8 @@ if dein#load_state('!PATH!')
   endif
 
   call dein#add('tomasr/molokai')
+  call dein#add('justmao945/vim-clang')
+  call dein#add('plasticboy/vim-markdown')
   call dein#add('scrooloose/nerdtree')
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
@@ -31,7 +33,14 @@ if dein#check_install()
 endif
 
 
-" setting
+"vim-clangの設定
+let g:clang_c_options = '-std=c11'
+let g:clang_cpp_options = '-std=c++1z -stdlib=libc++ –pedantic-errors'
+let g:clang_format_auto = 1
+let g:clang_format_style = 'Google'
+let g:clang_check_syntax_auto = 1
+
+
 "文字コードをUFT-8に設定
 set fenc=utf-8
 " バックアップファイルを作らない
